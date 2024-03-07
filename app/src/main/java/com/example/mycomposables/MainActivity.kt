@@ -18,7 +18,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MyComposablesTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -35,7 +34,7 @@ class MainActivity : ComponentActivity() {
 fun CustomCardPreview() {
     MyComposablesTheme {
         CustomCard(
-            drawable = R.drawable.fc2_nature_meditations,
+            drawable = R.drawable.fc4_self_massage,
             text = R.string.sampleText,
             modifier = Modifier.padding(8.dp)
         )
@@ -47,9 +46,17 @@ fun CustomCardPreview() {
 fun ImageAndFooterTextPreview() {
     MyComposablesTheme {
         ImageAndFooterText(
-            drawable = R.drawable.fc2_nature_meditations,
+            drawable = R.drawable.fc4_self_massage,
             text = R.string.sampleText,
             modifier = Modifier.padding(8.dp)
         )
+    }
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
+@Composable
+fun CustomLazyRowPreview() {
+    MyComposablesTheme {
+        CustomLazyRow(elementsList = alignYourBodyData)
     }
 }

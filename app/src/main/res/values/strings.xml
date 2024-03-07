@@ -4,4 +4,6 @@
 
 
     <string name="sampleText">This is some text</string>
+    <string name="subtitle_item_text">Subtitle</string>
+
 </resources>
