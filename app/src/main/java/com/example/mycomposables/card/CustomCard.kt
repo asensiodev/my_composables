@@ -1,4 +1,4 @@
-package com.example.mycomposables
+package com.example.mycomposables.card
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
