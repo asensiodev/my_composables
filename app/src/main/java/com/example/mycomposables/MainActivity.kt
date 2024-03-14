@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.mycomposables.card.CustomCard
+import com.example.mycomposables.lists.ListWithCustomArrangement
 import com.example.mycomposables.ui.theme.MyComposablesTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-
+                    ListWithCustomArrangement(modifier = Modifier.padding(8.dp))
                 }
             }
         }
@@ -59,5 +60,13 @@ fun ImageAndFooterTextPreview() {
 fun CustomLazyRowPreview() {
     MyComposablesTheme {
         CustomLazyRow(elementsList = alignYourBodyData)
+    }
+}
+
+@Preview(showSystemUi = true, showBackground = true, backgroundColor = 0xFFF5F0EE)
+@Composable
+fun ListWithCustomArrangementPreview() {
+    MyComposablesTheme {
+        ListWithCustomArrangement(modifier = Modifier.padding(8.dp))
     }
 }
