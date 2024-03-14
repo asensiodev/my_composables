@@ -58,7 +58,6 @@ object TopWithFooter : Arrangement.Vertical {
     }
 }
 
-
 val listData: List<DataPair> = listOf(
     R.drawable.ab1_inversions to R.string.sampleText,
     R.drawable.ab2_quick_yoga to R.string.sampleText,
