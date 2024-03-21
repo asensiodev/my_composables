@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.mycomposables.card.CustomCard
 import com.example.mycomposables.lists.ListWithCustomArrangement
+import com.example.mycomposables.text_field.CutCornerShapeBorderTextField
 import com.example.mycomposables.ui.theme.MyComposablesTheme
 
 class MainActivity : ComponentActivity() {
@@ -68,5 +69,17 @@ fun CustomLazyRowPreview() {
 fun ListWithCustomArrangementPreview() {
     MyComposablesTheme {
         ListWithCustomArrangement(modifier = Modifier.padding(8.dp))
+    }
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
+@Composable
+fun CutCornerShapeBorderTextFieldPreview() {
+    MyComposablesTheme {
+        CutCornerShapeBorderTextField(
+            text = "This is some example text",
+            onValueChange = {},
+            modifier = Modifier.padding(8.dp)
+        )
     }
 }
