@@ -19,6 +19,7 @@ fun CursorBrushTextField(
         onValueChange = {
             onValueChange(it)
         },
-        cursorBrush = Brush.linearGradient(gradientColors)
+        cursorBrush = Brush.linearGradient(gradientColors),
+        modifier = modifier
     )
 }
