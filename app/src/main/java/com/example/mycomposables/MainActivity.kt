@@ -14,6 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.example.mycomposables.card.CustomCard
 import com.example.mycomposables.lists.ListWithCustomArrangement
 import com.example.mycomposables.text_field.CursorBrushTextField
+import com.example.mycomposables.text_field.CustomDecorationBoxTextField
 import com.example.mycomposables.text_field.CutCornerShapeBorderTextField
 import com.example.mycomposables.ui.theme.MyComposablesTheme
 
@@ -93,6 +94,18 @@ fun CursorBrushTextFieldPreview() {
             text = "This is some sample text",
             onValueChange = {},
             modifier = Modifier.padding(8.dp)
+        )
+    }
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
+@Composable
+fun CustomDecorationBoxTextFieldPreview() {
+    MyComposablesTheme {
+        CustomDecorationBoxTextField(
+            text = "This is some sample text",
+            onValueChange = {},
+            modifier = Modifier.padding(2.dp)
         )
     }
 }
