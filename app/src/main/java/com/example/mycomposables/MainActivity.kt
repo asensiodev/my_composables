@@ -1,8 +1,10 @@
 package com.example.mycomposables
 
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
@@ -11,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.mycomposables.canvas.CustomGraph
 import com.example.mycomposables.canvas.InsetCanvas
 import com.example.mycomposables.canvas.MultipleTransformCanvas
 import com.example.mycomposables.canvas.PlaygroundCanvas
@@ -150,4 +153,11 @@ fun InsetCanvasPreview() {
 @Composable
 fun MultipleTransformCanvasPreview() {
     MultipleTransformCanvas()
+}
+
+@RequiresApi(Build.VERSION_CODES.O)
+@Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
+@Composable
+fun CustomGraphPreview() {
+    CustomGraph()
 }
