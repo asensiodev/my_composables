@@ -23,3 +23,16 @@ fun PlaygroundCanvas() {
     )
 }
 
+@Composable
+fun ScaleCanvas() {
+    Canvas(
+        modifier = Modifier.fillMaxSize()
+    ) {
+        scale(scaleX = 10f, scaleY = 15f) {
+            drawCircle(
+                Color.Green,
+                radius = 20.dp.toPx()
+            )
+        }
+    }
+}
