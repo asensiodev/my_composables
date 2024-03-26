@@ -7,6 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.scale
+import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -29,10 +30,18 @@ fun ScaleCanvas() {
         modifier = Modifier.fillMaxSize()
     ) {
         scale(scaleX = 10f, scaleY = 15f) {
-            drawCircle(
-                Color.Green,
-                radius = 20.dp.toPx()
-            )
+            drawCircle(Color.Green, radius = 20.dp.toPx())
+        }
+    }
+}
+
+@Composable
+fun TranslateCanvas() {
+    Canvas(
+        modifier = Modifier.fillMaxSize()
+    ) {
+        translate(left = 100f, top = -300f) {
+            drawCircle(Color.Green, radius = 200.dp.toPx())
         }
     }
 }
