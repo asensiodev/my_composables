@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.drawscope.inset
 import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.graphics.drawscope.scale
 import androidx.compose.ui.graphics.drawscope.translate
@@ -61,6 +62,18 @@ fun RotateCanvas() {
                 ),
                 size = size / 3F
             )
+        }
+    }
+}
+
+@Composable
+fun InsetCanvas() {
+    Canvas(
+        modifier = Modifier.fillMaxSize()
+    ) {
+        val quadrantSize = size / 2F
+        inset(horizontal = 50f, vertical = 30f) {
+            drawRect(Color.Green, size = quadrantSize)
         }
     }
 }

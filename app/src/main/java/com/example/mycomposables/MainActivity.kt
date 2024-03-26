@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.mycomposables.canvas.InsetCanvas
 import com.example.mycomposables.canvas.PlaygroundCanvas
 import com.example.mycomposables.canvas.RotateCanvas
 import com.example.mycomposables.canvas.ScaleCanvas
@@ -136,4 +137,10 @@ fun TranslateCanvasPreview() {
 @Composable
 fun RotateCanvasPreview() {
     RotateCanvas()
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
+@Composable
+fun InsetCanvasPreview() {
+    InsetCanvas()
 }
