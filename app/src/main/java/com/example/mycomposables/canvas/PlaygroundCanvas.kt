@@ -10,6 +10,7 @@ import androidx.compose.ui.graphics.drawscope.inset
 import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.graphics.drawscope.scale
 import androidx.compose.ui.graphics.drawscope.translate
+import androidx.compose.ui.graphics.drawscope.withTransform
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -73,6 +74,21 @@ fun InsetCanvas() {
     ) {
         val quadrantSize = size / 2F
         inset(horizontal = 50f, vertical = 30f) {
+            drawRect(Color.Green, size = quadrantSize)
+        }
+    }
+}
+
+@Composable
+fun MultipleTransformCanvas() {
+    Canvas(
+        modifier = Modifier.fillMaxSize()
+    ) {
+        withTransform({
+            translate(left = size.width / 5F)
+            rotate(degrees = 45F)
+        }) {
+            val quadrantSize = size / 2F
             drawRect(Color.Green, size = quadrantSize)
         }
     }
